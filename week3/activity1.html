@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+</head>
+<body>
+    <form id="survey-form" action="">
+    <h1>Christmas Party Feedback Form</h1>
+    
+    <div class="form-control">
+        <label for="name" id="label-name">
+          Name
+        </label>
+        <input type="text" id="name" value="name" placeholder="Enter your name" />
+    </div>
+    <div class="form-control">
+        <label for="email" id="label-email">
+          Email
+        </label>
+        <input type="email" id="email" value="email" placeholder="Enter your email" />
+    </div>
+    <div class="form-control">
+        <label for="age" id="label-age">
+          Age
+        </label>
+        <input type="number" id="age" value="age" placeholder="Enter your age" />
+    </div>
+    
+    <div class="form-control">
+        <label for="role" id="label-role">
+          Which option best describes you?
+        </label>
+        <select name="role" id="role">
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="intern">Intern</option>
+          <option value="other">Others</option>
+        </select>
+      </div>
+    
+      <div class="form-control">
+        <label id="label-satisfaction">
+          Did you enjoy the party?
+        </label>
+        <label for="yes" id="yes">
+          <input type="radio" id="yes" name="satisfaction">
+            Yes
+          </input>
+        </label>
+        <label for="no" id="no">
+          <input type="radio" id="attend-2" name="satisfaction">
+            No
+          </input>
+        </label>
+      </div>
+      
+      <div class="form-control">
+        <label>What did you like about the program?</label>
+        <br>
+        <label for="games">
+          <input type="checkbox" name="inp" value="Games">Games</input>
+        </label>
+        <br>
+        <label for="learning-session">
+          <input type="checkbox" name="inp" value="learning-session">The Learning Sessions from Industry Experts</input>
+        </label>
+        <br>
+        <label for="new-people">
+          <input type="checkbox" name="inp" value="new-people">Meeting new people</input>
+        </label>
+        <br>
+        <label for="event-place">
+          <input type="checkbox" name="inp" value="event-place">Event's Place</input>
+        </label>
+        <br>
+        <label for="raffle">
+          <input type="checkbox" name="inp" value="raffle">Raffle</input>
+        </label>
+        <br>
+        <label for="food-drinks">
+          <input type="checkbox" name="inp" value="food-drinks">Food & Drinks</input>
+        </label>
+      </div>
+      
+      <div class="form-control">
+        <label for="comment">
+          Any comments or suggestions
+        </label>
+        <textarea name="comment" id="comment">
+        </textarea>
+
+        <div class="buttons">
+        <button type="reset" value="reset" id="reset">
+            Reset
+        </button>
+
+        <button type="submit" value="submit" id="submit">
+            Submit
+        </button>
+        </div>
+        
+    </div>
+    
+
+    </form>
+
+</body>
+</html>
