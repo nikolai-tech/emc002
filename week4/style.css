@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .name {
+    width: 100%;
+    height: 10vh;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .name h1 {
+    color: white;
+    font-size: 3em;
+  }
+
+  .social-links {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 1px;
+  }
+  
+  .social-links a {
+    width: 100%;
+    margin: 5px;
+    padding: 3px;
+    border: hidden;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 5px;
+    border: solid;
+    cursor: pointer;
+  }
+  
+  .about-me {
+    width:100%;;
+    padding: 10px;
+  }
+  
+  .about-me h1, .about-me h2 {
+    text-align: center;
+  }
+  
+  .about-me p {
+    text-align: justify;
+  }
+  
+  .fun-facts {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .fact {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .fact img {
+    width: 100%;
+    height: 100px;
+    position: relative;
+  }
+  
+  .fact p {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .skills {
+    width: 100%;
+    background-color: darkblue;
+    padding: 10px;
+  }
+  
+  .skills h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  .skills table {
+    width: 100%;
+    color: white;
+  }
+  
+  .skills th, .skills td {
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  @media (min-width: 640px) {
+    .social-links {
+      margin: 0;
+      width: 25%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-me {
+      margin: 0;
+      width: 75%;
+      padding: 5px;
+    }
+
+    .about-me h1, .about-me h2 {
+      text-align: center;
+    }
+    
+    .about-me p {
+      text-align: justify;
+    }
+
+    .fun-facts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    .fact {
+      width: 100%;
+      padding: 5px;
+
+    }
+    
+    .fact img {
+      width: 100%;
+      height: 100px;
+      position: relative;
+    }
+    
+    .fact p {
+      text-align: center;
+    }
+
+    .skills {
+      padding: 10px;
+    }
+
+    .skills table {
+      width: 100%;
+    }
+    
+    .skills th, .skills td {
+      border: 1px solid white;
+      color: white;
+      padding: 5px;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .social-links{
+      width: 25%;
+    }
+    .about-me {
+      width: 40%;
+    }
+    
+    .skills {
+      width: 35%;
+    }
+  }  
