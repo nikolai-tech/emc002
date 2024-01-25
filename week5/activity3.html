@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+</head>
+<body>
+    <div>
+        <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vero inventore itaque fugiat blanditiis et quod at nulla nisi! Recusandae corrupti dignissimos harum sed modi totam repellendus, corporis velit nam repudiandae labore aliquam quam optio cum aliquid enim sunt suscipit fuga quaerat officiis pariatur, ipsa qui? Accusantium nisi quidem ea!</p>
+        <button onclick='document.getElementById("par").innerHTML = "Sorry for the lorem nonsense."'>Click This</button>
+    </div>
+
+    <div>
+        <p id="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, a.</p>
+        <button onclick='document.getElementById("font").style.fontFamily = "Georgia"'>Click This Second One</button>
+    </div>
+
+    <div>
+        <p id="hide&show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus a maiores in, recusandae id consectetur deleniti perferendis voluptates blanditiis quibusdam quod. Exercitationem omnis fuga dolore pariatur. Cumque nobis unde magnam?</p>
+        <button onclick='document.getElementById("hide&show").style.visibility = "hidden"'>Hide Me</button>
+        <button onclick='document.getElementById("hide&show").style.visibility = "visible"'>Show Me</button>
+    </div>
+    
+    <button onclick="showAlert()">Alert Button</button>
+
+    <div>Value: <span id="infoSpan"></span></div>
+
+    <div>Result: <input id="infoTextOutput" type="text" /></div>
+    <script>
+
+        console.log("Hello World");
+
+        function showAlert() 
+        {
+            var myText = "Welcome to CIIT";
+            alert (myText);
+        }
+
+        var xy = 5**3;
+        document.getElementById('infoSpan').innerHTML = "5**3";
+        document.getElementById('infoTextOutput').value = xy;
+
+    </script>
+</body>
+</html>
