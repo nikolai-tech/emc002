@@ -11,6 +11,14 @@ function addUser()
  alert("Please enter both username and password.");
  return;
  }
+
+ // Username validation
+if (username.length < 6 || !username.match(/[A-Za-z0-9\s_]/)) {
+alert("Username must be at least 6 characters long. Username must not contain special characters except underscore.");
+return;
+}
+
+ // Password validation
  if (password.length < 8 ||
  !password.match(/[A-Z]/) ||
  !password.match(/[a-z]/) ||
