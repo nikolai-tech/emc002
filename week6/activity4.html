@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Login Website</title>
+    <script src="validations.js"></script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="button" onclick="validateUser()">Validate</button>
+        <button type="button" onclick="addUser()">Add</button>
+        <button type="button" onclick="clearFields()">Clear</button>
+    </form>
+</body>
+</html>
