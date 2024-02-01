@@ -13,7 +13,7 @@ function addUser()
  }
 
  // Username validation
-if (username.length < 6 || !username.match(/[A-Za-z0-9\s_]/)) {
+if (username.length < 6 || username.match(/[^A-Za-z0-9\s_]/)) {
 alert("Username must be at least 6 characters long. Username must not contain special characters except underscore.");
 return;
 }
