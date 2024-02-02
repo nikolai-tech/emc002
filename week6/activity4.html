@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Login Website</title>
-    <script src="validations.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Validation</title>
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Login</h1>
     <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required required pattern="[0-9a-zA-Z_.-]*"><br>
+        <div class="head">
+            <a href="#" class="reg" >Register</a>
+           </div>
+        <div class="container">
+        <div class="register">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required>
+            <p class="rule1"><img src="images/wronglogo.jpeg" alt="Wrong">Username must be at least 6 characters long.</p>
+            <p class="rule2"><img src="images/wronglogo.jpeg" alt="Wrong">Username must not contain special characters except an underscore(_)</p>
+        </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <div class="register">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required>
+            <p class="rule3"><img src="images/wronglogo.jpeg" alt="Wrong">Password must contain at least 8 characters.</p>
+            <p class="rule4"><img src="images/wronglogo.jpeg" alt="Wrong">Password must include an uppercase letter.</p>
+            <p class="rule5"><img src="images/wronglogo.jpeg" alt="Wrong">Password must include a lowercase letter.</p>
+            <p class="rule6"><img src="images/wronglogo.jpeg" alt="Wrong">Password must include a number.</p>
+            <p class="rule7"><img src="images/wronglogo.jpeg" alt="Wrong">Password must include a special character.</p>
+        </div>
 
-        <button type="button" onclick="validateUser()">Validate</button>
-        <button type="button" onclick="addUser()">Add</button>
-        <button type="button" onclick="clearFields()">Clear</button>
+        <div class="register">
+        <button type="button">Register</button>
+        </div>
+        </div>
     </form>
+    <script src="validations.js"></script>
 </body>
 </html>
