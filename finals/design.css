@@ -1,0 +1,53 @@
+* {
+    margin: auto;
+    width: 100%;
+    font-family: 'Monda', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header .navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3C3633;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .logo {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  .logo a {
+    display: inline;
+    vertical-align: middle;
+    font-size: 23px;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+
+  }
+
+  .logo img {
+    width: 23px;
+    height: 23px;
+  }
