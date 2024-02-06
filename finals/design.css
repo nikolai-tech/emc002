@@ -1,0 +1,32 @@
+* {
+    font-family: 'Monda', sans-serif;
+    font-size: 30px;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+}
+
+/* sidebar content */
+.dropdown-content {
+    display: none;
+}
+
+/* topnav content */
+.topnav {
+    margin: 0 10px 0 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav img, .sidebar img {
+    width:40px;
+    height: 40px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
