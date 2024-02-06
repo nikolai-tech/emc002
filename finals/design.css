@@ -1,11 +1,26 @@
 * {
-    font-family: 'Monda', sans-serif;
-    font-size: 30px;
     margin: 0;
 }
 
-.header {
+body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: auto;
+    background: url(images/backgroundbread.png) repeat, #E0CCBE;
+    background-size: 40px 40px;
+}
+
+header {
+    margin: 0;
+    width: 90vw;
+    position: relative;
+}
+
+header > * {
+    font-family: 'Monda', sans-serif;
+    font-size: 30px;
+    background-color: #3C3633;
 }
 
 /* sidebar content */
@@ -15,7 +30,10 @@
 
 /* topnav content */
 .topnav {
-    margin: 0 10px 0 10px;
+    top: 0;
+    width: inherit;
+    position: fixed;
+    margin: 0;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -29,4 +47,35 @@
 .logo a{
     text-decoration: none;
     color: white;
+}
+
+/* content */
+.content > * {
+    font-family: 'Germania One', system-ui;
+    font-size: 20px;
+    font-weight: 10;
+    margin: 125px 30px;
+}
+
+#aboutus {
+    border-radius: 15px;
+    box-shadow: 20px 20px;
+    text-align: justify;
+    background-color: #EEEDEB;
+}
+
+#aboutus h2 {
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+    text-align: center;
+    background-color: #747264;
+    color: white;
+    text-transform: uppercase;
+}
+
+#aboutus p {
+    padding: 20px;
+    margin: 20px;
 }
