@@ -79,3 +79,8 @@ header > * {
     padding: 20px;
     margin: 20px;
 }
+
+footer {
+    width: 100%;
+    margin: 0;
+}
