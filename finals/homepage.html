@@ -23,14 +23,11 @@
 <body>
     <header style="background-color: #3C3633;">
 
-      <!-- sidebar content -->
-      <nav class="sidebar">
+      <!-- dropdown content -->
+      <nav class="navbar">
         <div class="dropdown">
-          <div class="dropdown-content">
-            <div class="dropdown-button">
-              <a href="#"><img src="images/down-arrow.png" alt="v"></a>
-            </div>
-            <a href="login.html">Login/Register</a>
+          <div class="dropdown-content" id="drop">
+            <a href="login.html">Login/Register</a><br>
             <a href="products.html">Products</a>
           </div>
         </div>
@@ -39,7 +36,7 @@
           <!-- topnav -->
           <div class="topnav">
             <div class="dropdown-button">
-              <a href="#"><img src="images/down-arrow.png" alt="v"></a>
+              <a href="#" onclick="toggleDropdown()"><img src="images/down-arrow.png" alt="v"></a>
             </div>
 
             <div class="logo">
@@ -60,14 +57,9 @@
     <p>We opened our doors in January 2024 with a passion for sharing our culture and heritage and to bring nostalgia through our baked goods. Bread has been a staple in Filipinos’ lives other than rice throughout history. From the farmers to the office workers and in a household, bread can be consumed as a treat and also as a staple for the morning before starting the day.</p>
     <p>And so, it became our mission to offer fresh, delicious, and affordable breads that cater to the diverse tastes and preferences of our customers. It is also our goal to be able to deliver these fresh delicious breads in the Philippines nationwide. Rest assured that it will be kept in a special container upon delivery and will arrive at your doorstep like it just came out from the oven.</p>
   </section>
-  </div>
-  
 
-
-  <!-- make this footer for bigger screen -->
-  <!-- put this content in the About Us content -->
-  <footer>
-    <div class="contactus">
+  <section id="contactus">
+      <h2>Contact Us</h2>
       <div class="address">
         <h3>Address:</h3>
         <p>1234, Kamuning, Quezon City</p>
@@ -87,7 +79,14 @@
         <h3>For business inquiries:</h3>
         <p>breadbusiness@bread.com.ph</p>
       </div>
-    </div>
+  </section>
+  </div>
+  
+
+
+  <!-- make this footer for bigger screen -->
+  <footer>
+    <a href="#contactus">Contact Us</a>
   </footer>
 </body>
 </html>

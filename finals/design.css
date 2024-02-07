@@ -8,24 +8,34 @@ body {
     width: 100%;
     height: auto;
     background: url(images/backgroundbread.png) repeat, #E0CCBE;
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 header {
     margin: 0;
-    width: 90vw;
+    width: 100vw;
     position: relative;
 }
 
 header > * {
     font-family: 'Monda', sans-serif;
     font-size: 30px;
-    background-color: #3C3633;
 }
 
-/* sidebar content */
-.dropdown-content {
-    display: none;
+/* dropdown content */
+.navbar {
+    font-size: 25px;
+    width: 100%;
+    background-color: #747264;
+    border-top: 3px double lightblue;
+    display: flex;
+    margin-top: 100px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
 }
 
 /* topnav content */
@@ -33,10 +43,14 @@ header > * {
     top: 0;
     width: inherit;
     position: fixed;
-    margin: 0;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    background-color: #3C3633;
+}
+
+.cart img {
+    margin-right: 40px;
 }
 
 .topnav img, .sidebar img {
@@ -57,7 +71,10 @@ header > * {
     margin: 125px 30px;
 }
 
+
+/* About Us */
 #aboutus {
+    display: none;
     border-radius: 15px;
     box-shadow: 20px 20px;
     text-align: justify;
@@ -70,7 +87,7 @@ header > * {
     border-radius: 15px 15px 0 0;
     margin: 0;
     text-align: center;
-    background-color: #747264;
+    background-color: #3C3633;
     color: white;
     text-transform: uppercase;
 }
@@ -80,7 +97,49 @@ header > * {
     margin: 20px;
 }
 
+/* Contact Us */
+#contactus {
+    display: none;
+    border-radius: 15px;
+    box-shadow: 20px 20px;
+    text-align: justify;
+    background-color: #EEEDEB;
+}
+
+#contactus h2 {
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+    text-align: center;
+    background-color: #3C3633;
+    color: white;
+    text-transform: uppercase;
+}
+
+#contactus h3, #contactus p {
+    padding: 7px;
+    margin-left: 45px;
+}
+
+
+/* footer content */
 footer {
     width: 100%;
     margin: 0;
+    font-family: 'Monda', sans-serif;
+    font-size: 25px;
+    background-color: #3C3633;
+    display: none;
+    justify-content: center;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: yellow;
 }
