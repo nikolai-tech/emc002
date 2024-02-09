@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bread</title>
     <link rel="icon" type="image/png" href="images/bread.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="design.css">
     
     <!-- js -->
@@ -24,30 +27,29 @@
     <header style="background-color: #3C3633;">
 
       <!-- dropdown content -->
-      <nav class="navbar">
-        <div class="dropdown">
-          <div class="dropdown-content" id="drop">
-            <a href="login.html">Login/Register</a><br>
-            <a href="products.html">Products</a>
-          </div>
+      <nav id="dropdown" class="w3-bar-block w3-card w3-top">
+        <div id="dropdown-content" class="dropdown-content">
+          <a href="#register" onclick="closeDropdown()">Login/Register</a>
+          <a href="#products" onclick="closeDropdown()">Products</a>
+          <a href="#contactus" onclick="closeDropdown()">Contact Us</a>
         </div>
       </nav>
+    
+      <div class="topnav">
+        <div class="dropdown-button">
+          <a href="#" onclick="toggleDropdown()">☰</a>
+        </div>
+    
+        <div class="logo">
+          <a href="#">Bread👍</a>
+        </div>
+    
+        <div class="cart">
+          <a href="#"><img src="images/shopping-cart.png" alt="cart"></a>
+        </div>
+      </div>
 
-          <!-- topnav -->
-          <div class="topnav">
-            <div class="dropdown-button">
-              <a href="#" onclick="toggleDropdown()"><img src="images/down-arrow.png" alt="v"></a>
-            </div>
-
-            <div class="logo">
-              <a href="#">Bread👍</a>
-              </div>
-
-            <div class="cart">
-            <a href="#"><img src="images/shopping-cart.png" alt="cart"></a>
-            </div>
-          </div>
-  </header>
+    </header>
 
   <!-- content -->
   <div class="content">
@@ -82,11 +84,5 @@
   </section>
   </div>
   
-
-
-  <!-- make this footer for bigger screen -->
-  <footer>
-    <a href="#contactus">Contact Us</a>
-  </footer>
 </body>
 </html>
