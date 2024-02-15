@@ -22,6 +22,7 @@ function toggleDropdown() {
     }
   });
 
+  // Section visibility
   function showSection(sectionId) {
     // Hide all sections
     const sections = document.querySelectorAll('section');
@@ -49,7 +50,8 @@ function toggleDropdown() {
         minusButton.on('click', function() {
           if (qtyInput.val() > 0) {
               qtyInput.val(parseInt(qtyInput.val()) - 1);
-          } else {
+          } 
+          else {
               qtyInput.val(0);
           }
           if (qtyInput.val() === '0') {
@@ -71,10 +73,14 @@ function toggleDropdown() {
       });
 
       qtyInput.on('input', function() {
-          if (qtyInput.val() === '0') {
-              addToCartButton.prop('disabled', true);
-          } else {
+          if (qtyInput.val() !== '0' && qtyInput.val() > '0') {
               addToCartButton.prop('disabled', false);
+          } 
+          else if (qtyInput.val() === '') {
+            addToCartButton.prop('disabled', true);
+          }
+          else {
+            addToCartButton.prop('disabled', true);
           }
           if (parseInt(qtyInput.val()) < 0) {
             qtyInput.val(0);
