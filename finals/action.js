@@ -89,11 +89,74 @@ function toggleDropdown() {
       });
     }
 
-    bindQuantityCounter('.prod1');
-    bindQuantityCounter('.prod2');
-    bindQuantityCounter('.prod3');
-    bindQuantityCounter('.prod4');
-    bindQuantityCounter('.prod5');
-    bindQuantityCounter('.prod6');
-    bindQuantityCounter('.prod7');
+    bindQuantityCounter('#prod1');
+    bindQuantityCounter('#prod2');
+    bindQuantityCounter('#prod3');
+    bindQuantityCounter('#prod4');
+    bindQuantityCounter('#prod5');
+    bindQuantityCounter('#prod6');
+    bindQuantityCounter('#prod7');
+});
+
+// Login/Register
+function toggleRegister() {
+  const loginForm = document.getElementById("login-form");
+  const registerForm = document.getElementById("register-form");
+  loginForm.style.display = "none";
+  registerForm.style.display = "block";
+}
+
+function toggleLogin() {
+  const loginForm = document.getElementById("login-form");
+  const registerForm = document.getElementById("register-form");
+  loginForm.style.display = "block";
+  registerForm.style.display = "none";
+}
+
+// Password Validation
+function hasNumber(mystring) {
+  return /\d/.test(mystring);
+}
+
+function hasUpperCase(mystring) {
+  return /[A-Z]/.test(mystring);
+}
+
+function hasLowerCase(mystring) {
+  return /[a-z]/.test(mystring);
+}
+
+function hasSpecialChar(mystring) {
+  return /[!@#$%^&*(),.?":{}|<>]/.test(mystring);
+}
+
+var password = document.getElementById("register-password");
+
+password.addEventListener("input", function() {
+  if (password.value.length < 8) {
+    password.setCustomValidity("Must be at least 8 characters long.");
+  } else if (!hasNumber(password.value)) {
+    password.setCustomValidity("Must contain at least one number.");
+  } else if (!hasUpperCase(password.value)) {
+    password.setCustomValidity("Must contain at least one uppercase letter.");
+  } else if (!hasLowerCase(password.value)) {
+    password.setCustomValidity("Must contain at least one lowercase letter.");
+  } else if (!hasSpecialChar(password.value)) {
+    password.setCustomValidity("Must contain at least one special character.");
+  } else {
+    password.setCustomValidity("");
+  }
+});
+
+
+// Email validation
+var email = document.getElementById("register-email");
+
+email.addEventListener("input", function() {
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailRegex.test(email.value)) {
+    email.setCustomValidity("Please enter a valid email address.");
+  } else {
+    email.setCustomValidity("");
+  }
 });

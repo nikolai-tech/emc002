@@ -30,7 +30,7 @@
       <!-- dropdown content -->
       <nav id="dropdown">
         <div id="dropdown-content" class="dropdown-content">
-          <a href="#register" onclick="closeDropdown(); showSection('register')">Login/Register</a>
+          <a href="#loginRegister" onclick="closeDropdown(); showSection('loginRegister')">Login/Register</a>
           <a href="#products" onclick="closeDropdown(); showSection('products')">Products</a>
           <a href="#contactus" onclick="closeDropdown(); showSection('contactus')">Contact Us</a>
           <a href="#aboutus" onclick="closeDropdown(); showSection('aboutus')"; >About Us</a>
@@ -55,9 +55,10 @@
 
   <!-- content -->
   <div class="content">
-
+  
+  <!-- main page -->
   <section id="mainpage">
-    <div class="prod1">
+    <div id="prod1">
       <img src="images/pandesal.jpg" alt="pandesal">
       <h3>Pandesal</h3>
       <p>Price per piece : ₱5.00</p>
@@ -71,7 +72,7 @@
     </div>
     </div>
 
-    <div class="prod2">
+    <div id="prod2">
       <img src="images/panderegla.jpg" alt="panderegla">
       <h3>Pan de Regla</h3>
       <p>Price per piece : ₱25.00</p>
@@ -85,7 +86,7 @@
     </div>
     </div>
 
-    <div class="prod3">
+    <div id="prod3">
       <img src="images/ensaymada.jpg" alt="ensaymada">
       <h3>Ensaymada</h3>
       <p>Price per piece : ₱75.00</p>
@@ -99,7 +100,7 @@
     </div>
     </div>
 
-    <div class="prod4">
+    <div id="prod4">
       <img src="images/spanishbread.jpg" alt="spanishbread">
       <h3>Spanish Bread</h3>
       <p>Price per piece : ₱8.00</p>
@@ -113,7 +114,7 @@
     </div>
     </div>
 
-    <div class="prod5">
+    <div id="prod5">
       <img src="images/tasty.jpg" alt="tasty">
       <h3>Tasty</h3>
       <p>Price per loaf : ₱70.00</p>
@@ -127,7 +128,7 @@
     </div>
     </div>
 
-    <div class="prod6">
+    <div id="prod6">
       <img src="images/kababayan.jpg" alt="kababayan">
       <h3>Kababayan</h3>
       <p>Price per piece : ₱10.00</p>
@@ -141,7 +142,7 @@
     </div>
     </div>
 
-    <div class="prod7">
+    <div id="prod7">
       <img src="images/monay.jpg" alt="monay">
       <h3>Kababayan</h3>
       <p>Price per piece : ₱10.00</p>
@@ -156,6 +157,53 @@
     </div>
   </section>
 
+  <!-- Login/Register -->
+  <section id="loginRegister">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="form-container">
+            <div id="login-form">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <div>Don't have an account? 
+                  <a href="#register-form" onclick="toggleRegister()">Create One</a>
+                  </div>
+              </form>
+            </div>
+            <div id="register-form" class="register-form">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="register-email" required>
+                  <small id="emailHelp" class="form-text text-muted">Must be a valid email address.</small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="register-password" required>
+                  <small id="passwordHelp" class="form-text text-muted">Must be at least 8 characters, including uppercase, lowercase, a number, and a special character.</small>
+                </div>
+                <div>Already have an account?
+                <a href="#login-form" onclick="toggleLogin()">Login</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
   <section id="aboutus">
     <h2>About Us</h2>
     <p>Welcome to Bread👍, a family-owned bakery that specializes in breads that are popular among Filipinos. The name of the business “Bread👍” was coined on tiktok that focuses on bread or what we call “breadtiktok”. People will usually comment that under the bread loaf cutting videos.</p>
@@ -163,6 +211,7 @@
     <p>And so, it became our mission to offer fresh, delicious, and affordable breads that cater to the diverse tastes and preferences of our customers. It is also our goal to be able to deliver these fresh delicious breads in the Philippines nationwide. Rest assured that it will be kept in a special container upon delivery and will arrive at your doorstep like it just came out from the oven.</p>
   </section>
 
+  <!-- Contact Us -->
   <section id="contactus">
       <h2>Contact Us</h2>
       <div class="address">
@@ -186,6 +235,7 @@
       </div>
   </section>
 
+  <!-- Product Description -->
   <section id="products">
     <h2>Product List</h2><br>
 

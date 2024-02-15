@@ -190,6 +190,23 @@ header > * {
     font-size: 20px;
 }
 
+/* Login/Register */
+.container {
+    width: 80vw;
+    font-size: 20px;
+    background-color: #EEEDEB;
+}
+.form-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.register-form {
+    display: none;
+}
 
 /* About Us */
 #aboutus {
