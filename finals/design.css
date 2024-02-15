@@ -42,17 +42,17 @@ header > * {
 .dropdown-content {
     margin-top: 92px;
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #EEEDEB;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    transition: all 0.3s;
 }
   
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
+    font-size: 20px;
     text-decoration: none;
     display: block;
 }
@@ -113,6 +113,83 @@ header > * {
     margin: 125px 30px;
 }
 
+/* Main Page */
+#mainpage {
+    display: block;
+}
+
+#mainpage h2 {
+    width: 80vw;
+    height: auto;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 15px 0 15px 0;
+    text-align: center;
+    background-color: #3C3633;
+    color: white;
+    text-transform: uppercase;
+}
+
+#mainpage div img {
+    border-radius: 25px 25px 0 0;
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: inherit;
+}
+
+#mainpage div {
+    width: 80vw;
+    height: auto;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #EEEDEB;
+    margin-bottom: 30px;
+}
+
+#mainpage h3 {
+    margin: 0;
+    font-family: 'Germania One', system-ui;
+    font-size: 35px;
+    font-weight: bolder;
+    color: white;
+    background-color: #747264;
+}
+
+#mainpage p {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#mainpage .addToCart {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+#mainpage .btn {
+    cursor: pointer;
+    user-select: none;
+}
+#mainpage .input-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+#mainpage .input-group input {
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+}
+
 
 /* About Us */
 #aboutus {
@@ -169,11 +246,11 @@ header > * {
 
 /* Products */
 #products {
-    display: block;
+    display: none;
 }
 
 #products h2 {
-    width: inherit;
+    width: 80vw;
     height: auto;
     font-size: 40px;
     font-weight: 600;

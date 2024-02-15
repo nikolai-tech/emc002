@@ -1,3 +1,4 @@
+// Dropdown
 function toggleDropdown() {
     const dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.classList.toggle("active");
@@ -36,3 +37,57 @@ function toggleDropdown() {
       section.style.display = 'block';
     }
   }
+
+  // Add to Cart and Quantity Counter
+  $(document).ready(function(){
+    function bindQuantityCounter(selector) {
+        const minusButton = $(selector + ' .minus');
+        const plusButton = $(selector + ' .plus');
+        const qtyInput = $(selector + ' .qty');
+        const addToCartButton = $(selector + ' .addToCart');
+
+        minusButton.on('click', function() {
+          if (qtyInput.val() > 0) {
+              qtyInput.val(parseInt(qtyInput.val()) - 1);
+          } else {
+              qtyInput.val(0);
+          }
+          if (qtyInput.val() === '0') {
+              addToCartButton.prop('disabled', true);
+          }
+      });
+
+      plusButton.on('click', function() {
+          qtyInput.val(parseInt(qtyInput.val()) + 1);
+          if (qtyInput.val() > 0) {
+              addToCartButton.prop('disabled', false);
+          }
+          else {
+            qtyInput.val(0);
+        }
+        if (qtyInput.val() === '0') {
+            addToCartButton.prop('disabled', true);
+        }
+      });
+
+      qtyInput.on('input', function() {
+          if (qtyInput.val() === '0') {
+              addToCartButton.prop('disabled', true);
+          } else {
+              addToCartButton.prop('disabled', false);
+          }
+          if (parseInt(qtyInput.val()) < 0) {
+            qtyInput.val(0);
+          }
+          qtyInput.val(qtyInput.val().replace(/[^0-9]/g, ''));
+      });
+    }
+
+    bindQuantityCounter('.prod1');
+    bindQuantityCounter('.prod2');
+    bindQuantityCounter('.prod3');
+    bindQuantityCounter('.prod4');
+    bindQuantityCounter('.prod5');
+    bindQuantityCounter('.prod6');
+    bindQuantityCounter('.prod7');
+});

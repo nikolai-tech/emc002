@@ -7,12 +7,12 @@
     <link rel="icon" type="image/png" href="images/bread.png">
 
     <!-- css -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="design.css">
     
     <!-- js -->
     <script src="jquery-3.7.1.js"></script>
-    <script src="action.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- fonts -->
@@ -28,7 +28,7 @@
     <header style="background-color: #3C3633;">
 
       <!-- dropdown content -->
-      <nav id="dropdown" class="w3-bar-block w3-card w3-top">
+      <nav id="dropdown">
         <div id="dropdown-content" class="dropdown-content">
           <a href="#register" onclick="closeDropdown(); showSection('register')">Login/Register</a>
           <a href="#products" onclick="closeDropdown(); showSection('products')">Products</a>
@@ -43,7 +43,7 @@
         </div>
     
         <div class="logo">
-          <a href="#">Bread👍</a>
+          <a href="#mainpage" onclick="showSection('mainpage')">Bread👍</a>
         </div>
     
         <div class="cart">
@@ -57,7 +57,103 @@
   <div class="content">
 
   <section id="mainpage">
+    <div class="prod1">
+      <img src="images/pandesal.jpg" alt="pandesal">
+      <h3>Pandesal</h3>
+      <p>Price per piece : ₱5.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
 
+    <div class="prod2">
+      <img src="images/panderegla.jpg" alt="panderegla">
+      <h3>Pan de Regla</h3>
+      <p>Price per piece : ₱25.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="prod3">
+      <img src="images/ensaymada.jpg" alt="ensaymada">
+      <h3>Ensaymada</h3>
+      <p>Price per piece : ₱75.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="prod4">
+      <img src="images/spanishbread.jpg" alt="spanishbread">
+      <h3>Spanish Bread</h3>
+      <p>Price per piece : ₱8.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="prod5">
+      <img src="images/tasty.jpg" alt="tasty">
+      <h3>Tasty</h3>
+      <p>Price per loaf : ₱70.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="prod6">
+      <img src="images/kababayan.jpg" alt="kababayan">
+      <h3>Kababayan</h3>
+      <p>Price per piece : ₱10.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="prod7">
+      <img src="images/monay.jpg" alt="monay">
+      <h3>Kababayan</h3>
+      <p>Price per piece : ₱10.00</p>
+      <div class="card-footer">Quantity:
+        <div class="input-group">
+          <button class="minus btn">-</button>
+          <input type="number" class="qty" name="qty" min="0" value="0">
+          <button class="plus btn">+</button>
+      </div>
+        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
+    </div>
+    </div>
   </section>
 
   <section id="aboutus">
@@ -94,14 +190,14 @@
     <h2>Product List</h2><br>
 
     <div>
-      <img src="/images/pandesal.jpg" alt="pandesal">
+      <img src="images/pandesal.jpg" alt="pandesal">
       <h3>Pandesal</h3>
       <p>A most popular style of bread among Filipinos.</p>
       <p>It is known for its <i>pillowy texture</i> and <i>signature breadcrumbs</i> on top.</p>
     </div>
 
     <div>
-      <img src="/images/panderegla.jpg" alt="panderegla">
+      <img src="images/panderegla.jpg" alt="panderegla">
       <h3>Pan de Regla</h3>
       <h4>Also known as <i>Kalihim</i></h4>
       <p>It is as pretty as it is tasty.</p>
@@ -109,7 +205,7 @@
     </div>
 
       <div>
-        <img src="/images/ensaymada.jpg" alt="ensaymada">
+        <img src="images/ensaymada.jpg" alt="ensaymada">
         <h3>Ensaymada</h3>
         <h4>Also spelled as <i>ensaimada or ensemada</i></h4>
         <p>It is a <i>soft, fluffy pastry</i> topped with <i>white sugar</i> and usually finely <i>grated cheese</i>.</p>
@@ -117,28 +213,28 @@
       </div>
 
       <div>
-        <img src="/images/spanishbread.jpg" alt="spanishbread">
+        <img src="images/spanishbread.jpg" alt="spanishbread">
         <h3>Spanish Bread</h3>
         <p>It is a <i>yeasted bread</i> that is <i>rolled into a log</i> enclosing within a <i>sugary and buttery filling</i>. They are then rolled in breadcrumbs before baking.</p>
         <p>It is normally enjoyed as an afternoon snack.</p>
       </div>
 
       <div>
-        <img src="/images/tasty.jpg" alt="tasty">
+        <img src="images/tasty.jpg" alt="tasty">
         <h3>Tasty</h3>
         <p>The Filipino style <i>sliced bread</i>.</p>
         <p>It is simply a sliced loaf bread in the Philippines.</p>
       </div>
 
       <div>
-        <img src="/images/kababayan.jpg" alt="kababayan">
+        <img src="images/kababayan.jpg" alt="kababayan">
         <h3>Kababayan</h3>
         <p>The Filipino style <i>sliced bread</i>.</p>
         <p>It is a <i>sweet muffin</i> known for its <i>golden brown exterior</i> and distinct <i>domed top shape</i>.</p>
       </div>
 
       <div>
-        <img src="/images/monay.jpg" alt="monay">
+        <img src="images/monay.jpg" alt="monay">
         <h3>Monay</h3>
         <h4>The local adaptation of the Spanish <i>Pan de Monja</i>, which translates to <i>nun's bread</i>.</h4>
         <h4>Also known as the <i>"Mother of all Filipino bread"</i></h4>
@@ -147,6 +243,7 @@
 
   </section>
   </div>
-  
+
+  <script src="action.js"></script>
 </body>
 </html>
