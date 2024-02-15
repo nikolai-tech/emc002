@@ -119,13 +119,13 @@ header > * {
     display: none;
     border-radius: 15px;
     box-shadow: 20px 20px;
-    text-align: justify;
     background-color: #EEEDEB;
 }
 
 #aboutus h2 {
     font-size: 40px;
-    padding: 15px;
+    font-weight: 600;
+    padding: 10px;
     border-radius: 15px 15px 0 0;
     margin: 0;
     text-align: center;
@@ -135,8 +135,9 @@ header > * {
 }
 
 #aboutus p {
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
+    font-size: 20px;
 }
 
 /* Contact Us */
@@ -144,12 +145,13 @@ header > * {
     display: none;
     border-radius: 15px;
     box-shadow: 20px 20px;
-    text-align: justify;
+    text-align: left;
     background-color: #EEEDEB;
 }
 
 #contactus h2 {
     font-size: 40px;
+    font-weight: 600;
     padding: 15px;
     border-radius: 15px 15px 0 0;
     margin: 0;
@@ -161,27 +163,74 @@ header > * {
 
 #contactus h3, #contactus p {
     padding: 7px;
-    margin-left: 45px;
+    margin-left: 15px;
+    font-size: 15px;
 }
 
+/* Products */
+#products {
+    display: block;
+}
 
-/* footer content */
-footer {
-    width: 100%;
-    margin: 0;
-    font-family: 'Monda', sans-serif;
-    font-size: 25px;
+#products h2 {
+    width: inherit;
+    height: auto;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 15px 0 15px 0;
+    text-align: center;
     background-color: #3C3633;
-    display: none;
-    justify-content: center;
-    padding: 5px;
-}
-
-footer a {
     color: white;
-    text-decoration: none;
+    text-transform: uppercase;
 }
 
-footer a:hover {
-    color: yellow;
+#products div img {
+    border-radius: 25px 25px 0 0;
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: inherit;
+}
+
+#products div {
+    width: 80vw;
+    height: auto;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #EEEDEB;
+    margin-bottom: 100px;
+}
+
+#products h3 {
+    margin: 0;
+    font-family: 'Germania One', system-ui;
+    font-size: 45px;
+    font-weight: bolder;
+    color: white;
+    background-color: #747264;
+}
+
+#products h4 {
+    margin: 10px;
+    font-family: 'Germania One', system-ui;
+    font-size: 22px;
+}
+
+#products p {
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#products i {
+    font-weight: 800;
+}
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 960px) {
+    
 }

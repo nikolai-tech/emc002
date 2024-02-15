@@ -20,3 +20,19 @@ function toggleDropdown() {
       dropdownButton.classList.remove("yellow");
     }
   });
+
+  function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      if (section.id !== sectionId) {
+        section.style.display = 'none';
+      }
+    });
+  
+    // Show the specified section
+    const section = document.querySelector(`#${sectionId}`);
+    if (section) {
+      section.style.display = 'block';
+    }
+  }

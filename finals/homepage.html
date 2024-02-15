@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="design.css">
     
     <!-- js -->
+    <script src="jquery-3.7.1.js"></script>
     <script src="action.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
@@ -29,10 +30,10 @@
       <!-- dropdown content -->
       <nav id="dropdown" class="w3-bar-block w3-card w3-top">
         <div id="dropdown-content" class="dropdown-content">
-          <a href="#register" onclick="closeDropdown()">Login/Register</a>
-          <a href="#products" onclick="closeDropdown()">Products</a>
-          <a href="#contactus" onclick="closeDropdown()">Contact Us</a>
-          <a href="#aboutus" onclick="closeDropdown()">About Us</a>
+          <a href="#register" onclick="closeDropdown(); showSection('register')">Login/Register</a>
+          <a href="#products" onclick="closeDropdown(); showSection('products')">Products</a>
+          <a href="#contactus" onclick="closeDropdown(); showSection('contactus')">Contact Us</a>
+          <a href="#aboutus" onclick="closeDropdown(); showSection('aboutus')"; >About Us</a>
         </div>
       </nav>
     
@@ -54,6 +55,11 @@
 
   <!-- content -->
   <div class="content">
+
+  <section id="mainpage">
+
+  </section>
+
   <section id="aboutus">
     <h2>About Us</h2>
     <p>Welcome to Bread👍, a family-owned bakery that specializes in breads that are popular among Filipinos. The name of the business “Bread👍” was coined on tiktok that focuses on bread or what we call “breadtiktok”. People will usually comment that under the bread loaf cutting videos.</p>
@@ -82,6 +88,63 @@
         <h3>For business inquiries:</h3>
         <p>breadbusiness@bread.com.ph</p>
       </div>
+  </section>
+
+  <section id="products">
+    <h2>Product List</h2><br>
+
+    <div>
+      <img src="/images/pandesal.jpg" alt="pandesal">
+      <h3>Pandesal</h3>
+      <p>A most popular style of bread among Filipinos.</p>
+      <p>It is known for its <i>pillowy texture</i> and <i>signature breadcrumbs</i> on top.</p>
+    </div>
+
+    <div>
+      <img src="/images/panderegla.jpg" alt="panderegla">
+      <h3>Pan de Regla</h3>
+      <h4>Also known as <i>Kalihim</i></h4>
+      <p>It is as pretty as it is tasty.</p>
+      <p>Soft and delicious with a <i>sweet, bright-red pudding filling</i>, this bread, makes a great breakfast or snack treat.</p>
+    </div>
+
+      <div>
+        <img src="/images/ensaymada.jpg" alt="ensaymada">
+        <h3>Ensaymada</h3>
+        <h4>Also spelled as <i>ensaimada or ensemada</i></h4>
+        <p>It is a <i>soft, fluffy pastry</i> topped with <i>white sugar</i> and usually finely <i>grated cheese</i>.</p>
+        <p>This bread is usually paired with a strong black coffee.☕</p>
+      </div>
+
+      <div>
+        <img src="/images/spanishbread.jpg" alt="spanishbread">
+        <h3>Spanish Bread</h3>
+        <p>It is a <i>yeasted bread</i> that is <i>rolled into a log</i> enclosing within a <i>sugary and buttery filling</i>. They are then rolled in breadcrumbs before baking.</p>
+        <p>It is normally enjoyed as an afternoon snack.</p>
+      </div>
+
+      <div>
+        <img src="/images/tasty.jpg" alt="tasty">
+        <h3>Tasty</h3>
+        <p>The Filipino style <i>sliced bread</i>.</p>
+        <p>It is simply a sliced loaf bread in the Philippines.</p>
+      </div>
+
+      <div>
+        <img src="/images/kababayan.jpg" alt="kababayan">
+        <h3>Kababayan</h3>
+        <p>The Filipino style <i>sliced bread</i>.</p>
+        <p>It is a <i>sweet muffin</i> known for its <i>golden brown exterior</i> and distinct <i>domed top shape</i>.</p>
+      </div>
+
+      <div>
+        <img src="/images/monay.jpg" alt="monay">
+        <h3>Monay</h3>
+        <h4>The local adaptation of the Spanish <i>Pan de Monja</i>, which translates to <i>nun's bread</i>.</h4>
+        <h4>Also known as the <i>"Mother of all Filipino bread"</i></h4>
+        <p>It's a slightly <i>sweet, heavy, and dense bun</i> with a deep partition in the center, creating two cheeks.</p>
+      </div>
+
   </section>
   </div>
   
