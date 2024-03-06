@@ -7,12 +7,10 @@
     <link rel="icon" type="image/png" href="images/bread.png">
 
     <!-- css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="design.css">
-    
+
     <!-- js -->
     <script src="jquery-3.7.1.js"></script>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- fonts -->
@@ -58,111 +56,100 @@
   
   <!-- main page -->
   <section id="mainpage">
-    <div id="prod1">
+    <div class="product" id="prod1">
       <img src="images/pandesal.jpg" alt="pandesal">
       <h3>Pandesal</h3>
       <p>Price per piece : ₱5.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod2">
+    <div class="product" id="prod2">
       <img src="images/panderegla.jpg" alt="panderegla">
       <h3>Pan de Regla</h3>
       <p>Price per piece : ₱25.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod3">
+    <div class="product" id="prod3">
       <img src="images/ensaymada.jpg" alt="ensaymada">
       <h3>Ensaymada</h3>
       <p>Price per piece : ₱75.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod4">
+    <div class="product" id="prod4">
       <img src="images/spanishbread.jpg" alt="spanishbread">
       <h3>Spanish Bread</h3>
       <p>Price per piece : ₱8.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod5">
+    <div class="product" id="prod5">
       <img src="images/tasty.jpg" alt="tasty">
       <h3>Tasty</h3>
       <p>Price per loaf : ₱70.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod6">
+    <div class="product" id="prod6">
       <img src="images/kababayan.jpg" alt="kababayan">
       <h3>Kababayan</h3>
       <p>Price per piece : ₱10.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
 
-    <div id="prod7">
+    <div class="product" id="prod7">
       <img src="images/monay.jpg" alt="monay">
       <h3>Kababayan</h3>
       <p>Price per piece : ₱10.00</p>
-      <div class="card-footer">Quantity:
+      <p>Quantity:</p>
         <div class="input-group">
           <button class="minus btn">-</button>
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" class="btn btn-primary">Add to Cart</button>
-    </div>
+        <button class="addToCart">Add to Cart</button>
     </div>
   </section>
 
   <!-- Login/Register -->
   <section id="loginRegister">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="form-container">
             <div id="login-form">
               <form>
                 <div class="form-group">
@@ -173,8 +160,8 @@
                   <label for="password">Password</label>
                   <input type="password" class="form-control" id="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <div>Don't have an account? 
+                <button type="submit">Login</button>
+                <div class="inq">Don't have an account? 
                   <a href="#register-form" onclick="toggleRegister()">Create One</a>
                   </div>
               </form>
@@ -184,23 +171,19 @@
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="register-email" required>
-                  <small id="emailHelp" class="form-text text-muted">Must be a valid email address.</small>
+                  <div id="emailHelp">Must be a valid email address.</div>
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="password" class="form-control" id="register-password" required>
-                  <small id="passwordHelp" class="form-text text-muted">Must be at least 8 characters, including uppercase, lowercase, a number, and a special character.</small>
+                  <div id="passwordHelp">Must be at least 8 characters, including uppercase, lowercase, a number, and a special character.</div>
                 </div>
-                <div>Already have an account?
+                <div class="inq">Already have an account?
                 <a href="#login-form" onclick="toggleLogin()">Login</a>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit">Register</button>
               </form>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- About Us -->
