@@ -148,7 +148,6 @@ password.addEventListener("input", function() {
   }
 });
 
-
 // Email validation
 var email = document.getElementById("register-email");
 

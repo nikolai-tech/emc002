@@ -25,7 +25,7 @@ if (mysqli_query($conn, $queryCreateDb)) {
 mysqli_select_db($conn, $database);
 
 // Example table creation
-$tableName = "register";
+$tableName = "loginregister";
 $queryCreateTable = "CREATE TABLE IF NOT EXISTS $tableName (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(55) NOT NULL,
