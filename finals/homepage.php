@@ -1,13 +1,14 @@
 <?php
-// Start the session
 session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
     <title>Bread</title>
     <link rel="icon" type="image/png" href="images/bread.png">
 
@@ -56,7 +57,7 @@ session_start();
         </div>
     
         <div class="cart">
-          <a href="#"><img src="images/shopping-cart.png" alt="cart"></a>
+          <a href="#checkout" onclick="showSection('checkout')"><img src="images/shopping-cart.png" alt="cart"></a>
         </div>
       </div>
 
@@ -77,7 +78,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Pandesal', 5.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod2">
@@ -90,7 +91,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Pan de Regla', 25.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod3">
@@ -103,7 +104,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Ensaymada', 75.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod4">
@@ -116,7 +117,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Spanish Bread', 8.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod5">
@@ -129,7 +130,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Tasty', 70.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod6">
@@ -142,7 +143,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Kababayan', 10.00, 1)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod7">
@@ -155,8 +156,12 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Monay', 5.00, 1)">Add to Cart</button>
     </div>
+  </section>
+
+  <section id="checkout">
+
   </section>
 
   <!-- Login/Register -->
@@ -200,9 +205,44 @@ session_start();
   <!-- Profile -->
   <section id="profile">
     <div class="options">
-      <a href="account-details">Account Information</a>
-      <a href="shipping-details">Shipping Details</a>
+      <a href="#account-details" onclick="showSectionVisible('account-details')">Account Information</a>
       <a href="serverside/logout.php" onclick="showSection('mainpage')">Sign Out</a>
+    </div>
+  </section>
+
+  <section id="account-details" style = "display: none">
+    <div class="opt">
+      <h3>Account Information</h3>
+      <p>Email: <?php echo $_SESSION['email']; ?></p>
+      <button class="changepass" onclick="showSectionVisible('change-pass')">Change Password</button><br>
+          <section id="change-pass">
+          <div id="login-form">
+              <form action="serverside/change_password.php" method="post">
+                <div class="form-group">
+                  <label for="password">Old Password:</label>
+                  <input type="password" class="form-control" id="old-password" name="old-password" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">New Password:</label>
+                  <input type="password" class="form-control" id="new-password" name="new-password" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Confirm New Password:</label>
+                  <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                </div>
+                  <button type="submit" name="submit" value="submit">Submit</button>
+              </form>
+            </div>
+          </section>
+      <p>WARNING: IF YOU CLICK THIS BUTTON, YOU WILL NOT BE ABLE TO RECOVER YOUR ACCOUNT.</p>
+      <button class="delete-account" onclick="showSectionVisible('deleteaccount')">Delete Account</button>
+      <section id="deleteaccount">
+      <h1>Delete Account</h1>
+      <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+      <form action="serverside/delete_account.php" method="post">
+        <button type="submit" name="confirm-delete">Confirm Delete</button>
+      </form>
+      </section>
     </div>
   </section>
 
@@ -242,14 +282,14 @@ session_start();
   <section id="products">
     <h2>Product List</h2><br>
 
-    <div>
+    <div class="display">
       <img src="images/pandesal.jpg" alt="pandesal">
       <h3>Pandesal</h3>
       <p>A most popular style of bread among Filipinos.</p>
       <p>It is known for its <i>pillowy texture</i> and <i>signature breadcrumbs</i> on top.</p>
     </div>
 
-    <div>
+    <div class="display">
       <img src="images/panderegla.jpg" alt="panderegla">
       <h3>Pan de Regla</h3>
       <h4>Also known as <i>Kalihim</i></h4>
@@ -257,7 +297,7 @@ session_start();
       <p>Soft and delicious with a <i>sweet, bright-red pudding filling</i>, this bread, makes a great breakfast or snack treat.</p>
     </div>
 
-      <div>
+      <div class="display">
         <img src="images/ensaymada.jpg" alt="ensaymada">
         <h3>Ensaymada</h3>
         <h4>Also spelled as <i>ensaimada or ensemada</i></h4>
@@ -265,28 +305,28 @@ session_start();
         <p>This bread is usually paired with a strong black coffee.☕</p>
       </div>
 
-      <div>
+      <div class="display">
         <img src="images/spanishbread.jpg" alt="spanishbread">
         <h3>Spanish Bread</h3>
         <p>It is a <i>yeasted bread</i> that is <i>rolled into a log</i> enclosing within a <i>sugary and buttery filling</i>. They are then rolled in breadcrumbs before baking.</p>
         <p>It is normally enjoyed as an afternoon snack.</p>
       </div>
 
-      <div>
+      <div class="display">
         <img src="images/tasty.jpg" alt="tasty">
         <h3>Tasty</h3>
         <p>The Filipino style <i>sliced bread</i>.</p>
         <p>It is simply a sliced loaf bread in the Philippines.</p>
       </div>
 
-      <div>
+      <div class="display">
         <img src="images/kababayan.jpg" alt="kababayan">
         <h3>Kababayan</h3>
         <p>The Filipino style <i>sliced bread</i>.</p>
         <p>It is a <i>sweet muffin</i> known for its <i>golden brown exterior</i> and distinct <i>domed top shape</i>.</p>
       </div>
 
-      <div>
+      <div class="display">
         <img src="images/monay.jpg" alt="monay">
         <h3>Monay</h3>
         <h4>The local adaptation of the Spanish <i>Pan de Monja</i>, which translates to <i>nun's bread</i>.</h4>
@@ -295,7 +335,6 @@ session_start();
       </div>
 
   </section>
-  </div>
 
   <script src="action.js"></script>
 </body>
