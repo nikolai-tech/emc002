@@ -53,12 +53,18 @@ session_start();
         </div>
     
         <div class="logo">
-          <a href="#mainpage" onclick="showSection('mainpage')">Bread👍</a>
+          <a href="#mainpage" onclick="showSectionMain('mainpage')">Bread👍</a>
         </div>
+
+        <div class="search">
+        <input type="text" class="search-bar" placeholder="Search..." name="search">
+        <button type="submit" class="search-button">Search</button>
+      </div>
     
         <div class="cart">
-          <a href="#checkout" onclick="showSection('checkout')"><img src="images/shopping-cart.png" alt="cart"></a>
+          <a href="#checkout" onclick="checkLoggedIn()"><img src="images/shopping-cart.png" alt="cart"></a>
         </div>
+
       </div>
 
     </header>
@@ -91,7 +97,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Pan de Regla', 25.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Pan de Regla', 25.00, 2)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod3">
@@ -104,7 +110,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Ensaymada', 75.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Ensaymada', 75.00, 3)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod4">
@@ -117,7 +123,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Spanish Bread', 8.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Spanish Bread', 8.00, 4)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod5">
@@ -130,7 +136,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Tasty', 70.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Tasty', 70.00, 5)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod6">
@@ -143,12 +149,12 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Kababayan', 10.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Kababayan', 10.00, 6)">Add to Cart</button>
     </div>
 
     <div class="product" id="prod7">
       <img src="images/monay.jpg" alt="monay">
-      <h3>Kababayan</h3>
+      <h3>Monay</h3>
       <p>Price per piece : ₱10.00</p>
       <p>Quantity:</p>
         <div class="input-group">
@@ -156,7 +162,7 @@ session_start();
           <input type="number" class="qty" name="qty" min="0" value="0">
           <button class="plus btn">+</button>
       </div>
-        <button class="addToCart" onclick="addToCart('Monay', 5.00, 1)">Add to Cart</button>
+        <button class="addToCart" onclick="addToCart('Monay', 5.00, 7)">Add to Cart</button>
     </div>
   </section>
 
